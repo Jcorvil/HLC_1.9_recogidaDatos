@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Cálculo del índice de masa corporal </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +12,23 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    
+    <ion-label position="floating">Introduzca su altura (en metros)</ion-label>
+    <ion-input
+      [(ngModel)]="altura"
+      type="number"
+      placeholder="0.00 m"
+    ></ion-input>
+
+    <ion-label position="floating">Introduzca su peso (en kg)</ion-label>
+    <ion-input
+    [(ngModel)]="peso"
+    type="number"
+    placeholder="0 kg"
+  ></ion-input>
+
+    <ion-button expand="block" (click)="calculoIMC()">Comprobar IMC</ion-button>
+    <ion-button expand="block" (click)="reiniciar()">Reiniciar</ion-button>
+    <h3>{{txtMensaje}}</h3>
   </div>
 </ion-content>
