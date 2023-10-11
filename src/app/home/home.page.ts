@@ -11,6 +11,7 @@ export class HomePage {
   imc: number = 0;
   txtMensaje: string = "";
   txtIMC: string = "" ;
+  txtIMCIdeal: string = "";
 
   constructor() { }
 
@@ -20,6 +21,9 @@ export class HomePage {
   }
 
   clasificacionIMC() {
+    this.txtIMC= "Su IMC es de " + (this.imc).toFixed(2);
+    this.txtIMCIdeal = "El índice de masa corporal ideal se encuentra entre 18.5 y 24.9";
+
     if (this.imc < 18.5) {
       console.log("Se encuentra con un peso inferior recomendado para su altura");
       this.txtMensaje = "Se encuentra con un peso inferior recomendado para su altura";
@@ -48,6 +52,7 @@ export class HomePage {
     this.imc = 0;
     this.txtMensaje = "";
     this.txtIMC = "" ;
+    this.txtIMCIdeal = "" ;
   }
 
 }

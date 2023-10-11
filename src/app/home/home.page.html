@@ -27,8 +27,11 @@
     placeholder="0 kg"
   ></ion-input>
 
-    <ion-button expand="block" (click)="calculoIMC()">Comprobar IMC</ion-button>
-    <ion-button expand="block" (click)="reiniciar()">Reiniciar</ion-button>
+    <ion-button color="secondary" (click)="calculoIMC()">Comprobar IMC</ion-button>
+    <br>
+    <ion-button color="warning" (click)="reiniciar()">Reiniciar</ion-button>
+    <h3>{{txtIMC}}</h3>
+    <h3>{{txtIMCIdeal}}</h3>
     <h3>{{txtMensaje}}</h3>
   </div>
 </ion-content>
